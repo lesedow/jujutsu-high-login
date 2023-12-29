@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --msg-color: #fcfafa;
+    --author: #666;
+    --submit-clr: #08d137; 
+    --submit-clr-hover: #06bf31;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.welcome-msg > p {
+    padding: 20px 0;
+    line-height: 1.5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-wrapper {
+    width: 90%;
+}
+
+.form-wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    margin: 15px 0;
+    padding: 0 20px;
+}
+
+.submit-btn button {
+    width: 100%;
+    padding: 20px 0;
+    margin: 10px 0;
+    font-family: inherit;
+    font-weight: 500;
+    background-color: var(--submit-clr);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fcfcfc;
+    letter-spacing: 1px;
+    transition: background-color .2s;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.submit-btn button:hover {
+    background-color: var(--submit-clr-hover);
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 0 0 100%;
+    padding: 0 20px;
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+.container:first-child   {
+    background-color: var(--msg-color);
+}
+
+.form-wrapper h1 {
+    padding: 25px 20px;
+}
+
+.form-wrapper .container {
+    background-color: white;
+}
+
+.welcome-msg {
+    width: 90%;
+    padding: 20px;
+}
+
+.author {
+    font-style: italic;
+    color: var(--author);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gojo {
+    width: 100px;
+}
+
+.image-container {
+    background-color: red;
+    min-height: 30vh;
+    background-image: url("img/jujutsu-high.jpg");
+    background-size: cover;
+    filter: brightness(50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container > img {
+    width: 150px;
+}
+
+.status {
+    position: relative;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    appearance: none;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-family: inherit;
+    font-weight: 500;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+input[type="text"]:invalid + .status::after,
+input[type="email"]:invalid + .status::after,
+input[type="password"]:invalid + .status::after,
+input[type="tel"]:invalid + .status::after {
+    content: "✗";
+    position: absolute;
+    color: red;
+    right: 20px;
+    top: -35px;
+}
+
+input[type="text"]:invalid,
+input[type="email"]:invalid,
+input[type="password"]:invalid,
+input[type="tel"]:invalid {
+    border: 1px solid red;
+}
+
+input[type="text"]:valid + .status::after,
+input[type="email"]:valid + .status::after,
+input[type="password"]:valid + .status::after,
+input[type="tel"]:valid + .status::after {
+    content: "✓";
+    position: absolute;
+    color: var(--submit-clr);
+    right: 20px;
+    top: -35px;
+}
+
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="password"]:valid,
+input[type="tel"]:valid {
+    border: 1px solid var(--submit-clr);
+}
+
+
+input[type="text"]:valid:focus,
+input[type="email"]:valid:focus,
+input[type="password"]:valid:focus,
+input[type="tel"]:valid:focus {
+    outline-color: var(--submit-clr);
+}
+
+input[type="text"]:invalid:focus,
+input[type="email"]:invalid:focus,
+input[type="password"]:invalid:focus,
+input[type="tel"]:invalid:focus {
+    outline-color: red;
+}
+
+@media only screen and (min-width: 800px) {
+    body {
+        flex-direction: row;
+    }
+    .image-container {
+        width: 100%;
+        height: 100vh;
+    }   
+
+    .image-container > img {
+        width: 350px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    label {
+        font-size: 0.8rem;
+    }
+    .form-wrapper form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .form-wrapper form .field {
+        max-width: 50%;
+        flex: 0 0 50%;
+        margin: 5px 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+        font-size: 0.8rem;
+        padding: 5px 40px 5px 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+
+    .submit-btn button {
+        font-size: 0.8rem;
+        padding: 15px 0;
+    }
+
+    input[type="text"]:invalid + .status::after,
+    input[type="email"]:invalid + .status::after,
+    input[type="password"]:invalid + .status::after,
+    input[type="tel"]:invalid + .status::after {
+        content: "✗";
+        position: absolute;
+        color: red;
+        right: 20px;
+        top: -22px;
+    }
+
+    input[type="text"]:valid + .status::after,
+    input[type="email"]:valid + .status::after,
+    input[type="password"]:valid + .status::after,
+    input[type="tel"]:valid + .status::after {
+        content: "✓";
+        position: absolute;
+        color: var(--submit-clr);
+        right: 20px;
+        top: -22px;
+    }
+}

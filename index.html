@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tokyo Jujutsu High</title>
+</head>
+<body>
+    <div class="image-container">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+    <div class="signup-container">
+        <div class="container">
+            <div class="welcome-msg">
+                <p>Congratulations! You've been accepted into Tokyo Jujutsu High School. Complete the form below to create your school account.</p>
+                <p>Throughout heaven and earth I alone am the honored one.</p>
+                <div class="author">
+                    <p>Gojo Satoru</p>
+                    <img class="gojo" src="img/gojo.jpeg" alt="Gojo">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form-wrapper">
+                <h1>Let's do this.</h1>
+                <form>
+                    <div class="field">
+                        <label for="first-name">
+                            First Name
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="text" value=""  pattern="^[^0-9]+$" size="30" maxlength="245" id="first-name" name="first-name" placeholder="Gojo" required>
+                        <span class="status"></span>
+                    </div>
+                    <div class="field">
+                        <label for="last-name">
+                            Last Name
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="text" value="" size="30"  pattern="^[^0-9]+$" maxlength="245" id="last-name" name="last-name" placeholder="Satoru" required>
+                        <span class="status"></span>
+                    </div>
+                    <div class="field">
+                        <label for="email">
+                            Email
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="email" value="" size="30" maxlength="245" id="email" name="email" placeholder="example@example.com" required>
+                        <span class="status"></span>
+                    </div>
+                    <div class="field">
+                        <label for="phone-number">
+                            Phone Number
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input type="tel" value="" size="30" max="245" pattern="^[^a-zA-Z]+$" id="phone-number" name="phone-number" placeholder="123456789" required>
+                        <span class="status"></span>
+                    </div>
+                    <div class="field">
+                        <label for="password">
+                            Password
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input minlength="8" type="password" id="password" name="password" placeholder="At least 8 characters" required>
+                        <span class="status"></span>
+                    </div>
+                    <div class="field">
+                        <label for="confirm-pas">
+                            Confirm Password
+                            <strong><span aria-label="required">*</span></strong>
+                        </label>
+                        <input minlength="8" type="password" id="confirm-pas" name="first-name" placeholder="At least 8 characters" required>
+                        <span class="status"></span>
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit">Sign Up</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
